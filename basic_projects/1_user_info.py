@@ -16,4 +16,8 @@ cgpa = float(input("Enter your CGPA: "))
 
 print(f"Hello {name}!")
 print(f"You study at {uni} University.")
-print(f"Your CGPA is {cgpa}")
+print(f"Your CGPA is {cgpa:.2f}")
+
+print(type(name))
+print(type(uni))
+print(type(cgpa))
