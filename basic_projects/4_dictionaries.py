@@ -145,7 +145,7 @@
 
 # # Use dictionary keys.
 
-###############################
+# ##############################
 
 
 # # Mini Practice 4
@@ -184,33 +184,148 @@ student = {
 
 # Store one student in a dictionary.
 
-print("""
-      ===== Student Profile Manager =====
+while True:
+    print("""
+          ===== Student Profile Manager =====
 
-1. View Student
-2. Update CGPA
-3. Add City
-4. Delete City
-5. Exit
-      
-      """)
+    1. View Student
+    2. Update CGPA
+    3. Add City
+    4. Delete City
+    5. Exit
 
-# Ask User
+          """)
 
-user_action = input("Choose an option from 1 to 5. : ")
+    # Ask User
 
-if user_action == "1":
-    print(student.items())
-elif user_action == "2":
-    student["cgpa"] = "3.8"
-    print(student.items())
-elif user_action == "3":
-    student["city"] = "Sargodha"
-    print(student.items())
-elif user_action == "4":
-    student.pop("city")
-    print(student.items())
-else:
-    print(exit)
+    user_action = input("Choose an option from 1 to 5. : ")
+
+    if user_action == "1":
+        for key, value in student.items():
+            print(key, ":" , value)
+
+
+
+    elif user_action == "2":
+        updated_cgpa = float(input("Enter updated cgpa : "))
+        student["cgpa"] = updated_cgpa
+        print("CGPA updated successfully.")
+        
+
+
+    elif user_action == "3":
+        updated_city = input("Enter city to update: ")
+        student["city"] = updated_city
+        print("City updated successfully.")
+        
+        
+    elif user_action == "4":
+        removed_city = student.pop("city" , None)
+        
+        if removed_city is None:
+            print("City not found.")
+        else:
+            print("City deleted successfully.")
+    
+        
+    elif user_action == "5":
+        break
+    
+
 
 # Each option should modify the dictionary.
+
+
+book = {
+    "title" : "Python Crash Course",
+    "author" : "Eric Matthes",
+    "price" : 3500,
+    "available" : True
+}
+
+# Menu
+
+print("""
+      ===== Library Book Manager =====
+
+1. View Book
+2. Update Price
+3. Change Availability
+4. Add Publisher
+5. Remove Publisher
+6. Exit
+      """)
+
+# Solution
+
+# Requirements
+# Ask user for input
+
+while True:
+    user_choice = int(input("Choose from 1 to 6 : "))
+
+
+    # Option 1: Display the book nicely.
+    if user_choice == 1:
+        for key, value in book.items():
+            print(key, ":" , value)
+            
+            
+    # Option 2: Ask the user for a new price.
+    
+    elif user_choice == 2:
+        new_price = int(input("Enter updated price : "))
+        book["price"] = new_price
+        print("Price updated successfully.")
+        
+    
+    # Option 3: Change Availability
+    
+    elif user_choice == 3:
+        if book["available"]:
+            book["available"] = False
+            print("Book is not available.")
+        else:
+            book["available"] = True
+            print("Book is available.")
+    
+        
+    # Option 4: Add Publisher
+    
+    elif user_choice == 4:
+        book["publisher"] = input("Enter publisher: ")
+        print("Publisher added successfully.")
+        
+        
+    # Option 5: Remove Publisher
+    
+    elif user_choice==5:
+        book.pop("publisher" , "Publisher not found")
+        
+        
+    else:
+        break
+        
+####################################################
+
+
+book = {
+    "title": "Python",
+    "price": 3500
+}
+
+x = book
+
+print(id(book))
+print(id(x))
+
+x = book.copy()
+x["price"] = 4000
+print(book)
+print(x)
+print(f"Book id : {id(book)}")
+print(f"X id : {id(x)}")
+
+# Variables are labels attached to the objects,  Two variables can point to same or different objects.
+
+####################################################################
