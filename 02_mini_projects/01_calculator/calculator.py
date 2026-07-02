@@ -8,54 +8,56 @@
 
 # Each function should return the answer, not print it.
 
-def addition(a,b):
-    return a + b
+# Add
+def addition(num1, num2):
+    return num1 + num2
 
-def subtract(a, b):
-    return a - b
+def subtraction(num1, num2):
+    return num1 - num2
 
-def division(a, b):
-    return a / b
+def multiplication(num1, num2):
+    return num1 * num2
 
-def multiplication(a, b):
-    return a * b
+def division(num1, num2):
+    return num1 / num2
+def power(num1, num2):
+    return num1 ** num2
 
 while True:
     print("""
-          ---------------------Menu----------------------
-          1. Add
-          2. Subtract
-          3. Division
-          4. Multiplication
-          5. Exit
-          
-          """)
+      Select a number for its corresponding operation:
+      1. Add
+      2. Subtract
+      3. Multiplication
+      4. Division
+      5. Power
+      6. Exit
+      """)
     
-    user_input = int(input("Select a number for its corresponding operation: "))
-
+    user_operation = int(input("Enter a number: "))
     
-    if user_input not in [1 ,2, 3, 4, 5]:
-        print("Invalid choice! Please select from the menu.")
-        continue
-    
-    if user_input == 5:
+    if user_operation == 6:
         break
     
-    num1 = int(input("Enetr number 1: "))
-    num2 = int(input("Enter num 2: "))
+    if user_operation not in [1,2,3,4,5,6]:
+        print(f"Invalid Input {user_operation}! Please select a number from the list")
+        continue
     
-    if user_input == 1:
-        add_result = addition(num1, num2)
-        print(f"The addition of {num1} and {num2} is {add_result}")
-        
-    elif user_input == 2:
-        subtract_result = subtract(num1 , num2)
-        print(f"The subtraction of {num1} and {num2} is {subtract_result}")
-        
-    elif user_input == 3:
-        div_result = division(num1, num2)
-        print(f"The division of {num1} and {num2} is {div_result}")
-        
-    elif user_input == 4:
-        multiple_result = multiplication(num1 , num2)
-        print(f"The multiplication of {num1} and {num2} is {multiple_result}")
+    num1 = int(input("Enter number one: "))
+    num2 = int(input("Enter number two: "))
+    
+    if user_operation == 1:
+        addition_result = addition(num1,num2)
+        print(f"The addition of {num1} and {num2} is: {addition_result}")       
+    elif user_operation == 2:
+        result = subtraction(num1, num2)
+        print(f"The subtraction of {num1} and {num2} is: {result}")
+    elif user_operation == 3:
+        result = multiplication(num1, num2)
+        print(f"The multiplication of {num1} and {num2} is: {result}")
+    elif user_operation == 4:
+        result = division(num1, num2)
+        print(f"The division result of {num1} and {num2} is {result}")
+    elif user_operation == 5:
+        result = power(num1, num2)
+        print(f"The number {num1} with power of {num2} is:  {result} ")
