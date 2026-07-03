@@ -1,102 +1,63 @@
-# # Practice 1 — Tuples
-# student = ("Maria", 24, 3.95, "AI")
+# Mini Project
+# Create a simple Calculator using functions.
+# Functions:
+# add(a, b)
+# subtract(a, b)
+# multiply(a, b)
+# divide(a, b)
 
-# # Tasks:
+# Each function should return the answer, not print it.
 
-# # Print the name
-# print(f"Student name is: {student[0]}")
-# # Print the age
-# print(f"{student[0]} is {student[1]} years old.")
-# # Print the CGPA
-# print(f"Cgpa : {student[2]}")
-# # Print the department
-# print(f"Student's department: {student[3]}")
-# # Print the length
-# print(f"Length is: {len(student)}")
-# # Print the index of "AI"
-# print(f"The index of AI is: {student.index('AI')}")
-# # Print how many times 24 appears using count()
-# print(f"Number of occurance of 24: {student.count(24)}")
+# Add
+def addition(num1, num2):
+    return num1 + num2
 
+def subtraction(num1, num2):
+    return num1 - num2
 
-######################################################
+def multiplication(num1, num2):
+    return num1 * num2
 
-# # Practice 2 — Sets
-# numbers = {10, 20, 20, 30, 40, 40}
+def division(num1, num2):
+    return num1 / num2
+def power(num1, num2):
+    return num1 ** num2
 
-# # Tasks:
-
-# # Print the set
-# print(numbers)  # it only shows a number once. so, it means set discard duplicates.
-# # Add 50
-# numbers.add(50)
-# print(numbers)
-# # Remove 20
-# numbers.remove(20)
-# print(numbers)
-# # Try removing 100
-# # numbers.remove(100) # it gives error
-# # print(numbers)
-
-# numbers.discard(100)
-# print(numbers)
-# # Use both remove() and discard() and observe the difference
-# # Check if 30 exists
-# print(f"30 in numbers exists? : {30 in numbers}")
-# # Check if 70 exists
-# print(f"70 in numbers exists? : {70 in numbers}")
-
-
-
-# ######################################################
-
-# # Practice 3 — Set Operations
-
-
-# python_students = {"Ali", "Maria", "Noor", "Ahmed"}
-# ml_students = {"Maria", "Ahmed", "Fatima", "Hamza"}
-
-# # Union
-# print(f"Union: {python_students | ml_students}")
-
-# # Intersection
-# print(f"Intersection: {python_students & ml_students}")
-
-# # Difference
-# print(f"The diffference of python-ml = : {python_students-ml_students}")
-# print(f"The difference of ml-python = : {ml_students-python_students}")
-
-
-##########################################################
-
-# Topic 5 Mini Project
-print("Student Attendance Manager")
-
-# Ask the user to enter student names one by one.
-print("Enter student names one by one and enter 'done' when completed.")
-names = set()
 while True:
-    user_name = input("Enter student name: ")
-    if user_name.lower() == "done":
+    print("""
+      Select a number for its corresponding operation:
+      1. Add
+      2. Subtract
+      3. Multiplication
+      4. Division
+      5. Power
+      6. Exit
+      """)
+    
+    user_operation = int(input("Enter a number: "))
+    
+    if user_operation == 6:
         break
-    names.add(user_name)
-    print(f"Username '{user_name}' added successfully!")
     
+    if user_operation not in [1,2,3,4,5,6]:
+        print(f"Invalid Input {user_operation}! Please select a number from the list")
+        continue
     
-    # if user_name != "done":
-    #     names.add(user_name)
-    #     print(f"Student name '{user_name}' added successfully!")
-    # else:
-    #     break
-print(f"The unique students are: {names}")
-
-
-# Then print:
-# Unique Students:
-
-print(f"Total unique students: {len(names)}")
-
-# Total Unique Students: 3
-
-# Notice that "Ali" should appear only once because we're using a set.
-
+    num1 = int(input("Enter number one: "))
+    num2 = int(input("Enter number two: "))
+    
+    if user_operation == 1:
+        addition_result = addition(num1,num2)
+        print(f"The addition of {num1} and {num2} is: {addition_result}")       
+    elif user_operation == 2:
+        result = subtraction(num1, num2)
+        print(f"The subtraction of {num1} and {num2} is: {result}")
+    elif user_operation == 3:
+        result = multiplication(num1, num2)
+        print(f"The multiplication of {num1} and {num2} is: {result}")
+    elif user_operation == 4:
+        result = division(num1, num2)
+        print(f"The division result of {num1} and {num2} is {result}")
+    elif user_operation == 5:
+        result = power(num1, num2)
+        print(f"The number {num1} with power of {num2} is:  {result} ")
