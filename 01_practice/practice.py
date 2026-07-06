@@ -42,8 +42,8 @@ def update_cgpa(std):
             print(f"{std.title()}'s CGPA updated successfully!")
             found = True
             break
-        if not found:
-            print(f"Invalid choice! {std.title()}'s record is not available. Please select from available records!")
+    if not found:
+        print(f"Invalid choice! {std.title()}'s record is not available. Please select from available records!")
                       
 
 def delete_std(std):
@@ -55,7 +55,7 @@ def delete_std(std):
             found = True
             break
     if not found:
-        print(f"{std.title()}'s record didn't exists. Please select from avaialble records!")
+        print(f"{std.title()}'s record didn't exists. Please select from avaialble records!")        
             
              
 
