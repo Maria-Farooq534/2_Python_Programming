@@ -1,3 +1,0 @@
-hello Maria!
-Welcome to Python.
-This is my first program to handle files
