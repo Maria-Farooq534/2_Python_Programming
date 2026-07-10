@@ -31,7 +31,7 @@ def clear_notes():
         else:
             with open("./02_mini_projects/03_notes_manager/notes.txt" , "w") as file:
                 pass
-                print("Notes Cleared!")
+                print("Notes are Cleared!")
 
 while True:
     print("""
