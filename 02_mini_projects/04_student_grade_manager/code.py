@@ -71,7 +71,7 @@ while True:
                 if confirm_user in ["n" , "no"]:
                     print("No records cleared!")
                     break
-                if confirm_user in ["yes" , "y"]:
+                elif confirm_user in ["yes" , "y"]:
                     clear_records()
                     break
                 else:
