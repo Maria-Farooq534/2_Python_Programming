@@ -7,6 +7,9 @@ print("Hello")
 def sum(a,b):
     print(a + b)
     
+
+numbers = [1,2,3]
+    
     
 # count = 0
 
@@ -22,3 +25,9 @@ def hello():
     
 # hello()
 # print(count)
+
+def increase(): # instead of chnaging count variable in each file. we can simply define a function for increment and call the function whenever we want to change or incremnt the vlaue.
+    global count
+    count += 1
+    print(count)
+    # return count
