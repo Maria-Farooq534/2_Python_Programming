@@ -1,0 +1,44 @@
+[
+    {
+        "trans_type": "income",
+        "description": "salary",
+        "amount": 70000.0,
+        "category": "salary",
+        "tags": [
+            "income",
+            " salary"
+        ],
+        "salary": 70000.0
+    },
+    {
+        "trans_type": "expense",
+        "description": "shopping",
+        "amount": 50000.0,
+        "category": "shopping",
+        "tags": [
+            "clothing",
+            " food"
+        ],
+        "shopping": 50000.0
+    },
+    {
+        "trans_type": "expense",
+        "description": "shopping online",
+        "amount": 6000.0,
+        "category": "shopping",
+        "tags": [
+            "shopping",
+            " purchase"
+        ],
+        "shopping": 6000.0
+    },
+    {
+        "trans_type": "income",
+        "description": "This income is the salar.",
+        "amount": 900000.0,
+        "category": "salary",
+        "tags": [
+            "pay"
+        ]
+    }
+]

@@ -1,5 +1,7 @@
 import storage_helper
 
+storage_helper.load_data()
+
 while True:
     print("""
           ***** Menu *****
@@ -20,11 +22,22 @@ while True:
                 print("Invalid choice! Please choose a number from 1-5.")
                                 
         if user_choice == 5:
+            storage_helper.save_data()
+            print("Goodbye")
             break
         
         if user_choice == 1:
             storage_helper.add_trans()
+        
+        elif user_choice == 2:
+            storage_helper.view_trans()
             
+        elif user_choice == 3:
+            storage_helper.view_summary()
+        
+        elif user_choice == 4:
+            storage_helper.save_data()
+                    
             
     except ValueError:
         print("Invalid Choice. Please enter a number for corresponding option!")
