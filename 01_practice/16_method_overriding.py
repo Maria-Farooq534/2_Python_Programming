@@ -15,5 +15,5 @@ class Researcher(Student):
         super().introduce()
         
         
-student = Student()
+student = Researcher()
 student.introduce()
