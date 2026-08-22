@@ -17,3 +17,6 @@ class Researcher(Student):
         
 student = Researcher()
 student.introduce()
+
+# MRO
+print(Researcher.__mro__)
