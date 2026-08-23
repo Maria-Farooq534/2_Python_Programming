@@ -107,3 +107,68 @@ print(student3.percentage())
 print(student2.__dict__)
 student2.change_name("Alex")
 print(student2.__dict__)
+
+
+
+# Challenge 1
+# Create a class called Book.
+# Each Book object should have:
+# title
+# author
+# pages
+# Create two different Book objects with different values.
+# Then print their information.
+# Don't use __str__() yet.
+
+class Book():
+    def __init__(self, title, author, pages):
+        self.title = title
+        self.author = author
+        self.pages = pages
+
+        
+    def __str__(self):
+        return f"\nBook Title: {self.title} \nBook Author: {self.author} \nBook Pages: {self.pages}"
+    
+    
+    def __len__(self):
+        # return f"\nLength: {2}"
+        return self.pages
+    
+
+book1 = Book("The hundred days of ML" , "ABC", 230)
+book2 = Book("Python Programming", "Charle", 300)
+print(book1)
+print(book2)
+
+print(len(book1))
+print(len(book2))
+
+    
+# Challenge 2 — strengthen __str__() and __len__()
+# Create this class:
+# class Course:
+# Each course should have:
+# name
+# instructor
+# students
+
+class Course():
+    def __init__(self, name, instructor, students):
+        self.name = name
+        self.instructor = instructor
+        self.students = students
+        
+    def __str__(self):
+        return f"\nCourse Name: {self.name} \nCourse Instructor: {self.instructor} \nNumber of Students Enrolled: {self.students}"
+    
+    
+    def __len__(self):
+        return self.students
+    
+course1 = Course("ML" , "Andrew NG", 35)
+course2 = Course("AI" , "Luis Serrano" , 100)
+print(course1)
+print(course2)
+print(f"Number of students enrolled in course 1: {len(course1)}")
+print(f"Number of students enroolled in course 2: {len(course2)}")
