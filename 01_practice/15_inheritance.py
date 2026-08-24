@@ -42,14 +42,39 @@
 # student.introduce()
 
 
-class Person:
-    def walk(self):
-        print("Walking...")
+# class Person:
+#     def walk(self):
+#         print("Walking...")
 
+
+# class Student(Person):
+#     pass
+
+# student = Student() 
+# student.walk()
+
+
+
+class Person:
+    school = "UOS"
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
 
 class Student(Person):
-    pass
+    
+    def __init__(self, name, age, marks):
+        super().__init__(name, age)
+        self.marks = marks
 
-student = Student() 
-student.walk()
+    def __str__(self):
+        return f"Name: {self.name} \nAge: {self.age} \nMarks: {self.marks} \nschool: {self.school}"
+       
+
+student1 = Student("Maria" ,24, 90)
+student2 = Student("Ali" ,30,  89)
+
+print(student1)
+print(student2)
+
     
