@@ -42,16 +42,16 @@
 # student.introduce()
 
 
-# class Person:
-#     def walk(self):
-#         print("Walking...")
+class Person:
+    def walk(self):
+        print("Walking...")
 
 
-# class Student(Person):
-#     pass
+class Student(Person):
+    pass
 
-# student = Student() 
-# student.walk()
+student = Student() 
+student.walk()
 
 
 
