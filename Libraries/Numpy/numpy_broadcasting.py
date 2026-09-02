@@ -66,5 +66,25 @@ ages = np.array([[33,13,16,78,45,34,23,12,19],
 teenagers = ages[ages<18]
 print(teenagers)
 
-adults = ages[ages >= 18]
+adults = ages[(ages >= 18) | (ages < 65)]
+# adults = ages[(ages >= 18) & (ages < 65)]
+
 print(adults)
+
+seniors = ages[ages >= 65]
+print(seniors)
+
+evens = ages[ages % 2 == 0]
+print("Evens: ", evens)
+
+odds = ages[ages % 2 == 1]
+print("Odds: ", odds)
+
+adult = np.where(ages >= 18 , ages , 0) # it takes 3 arguments, first is condition, 2nd is the array itself on which the condition is applied , and 3rd is the value with which we will replace 
+print(adult)
+
+senior = np.where(ages >= 65 , ages , -1)
+print(senior)
+
+teenager = np.where(ages <= 18 , ages , np.nan)
+print(teenager)
