@@ -1,11 +1,34 @@
-# Print:
-# 1. student1's name
-# 2. student2's name
-# 3. student1's school
-# 4. student2's school
+class Parameters:
+    def __init__(self, name, number):
+        self.name = name
+        self.number = number
+    
+    
+class Bias(Parameters):
+    def __init__(self, name, number, bias_value):
+        super().__init__(name, number)
+        self.bias_value = bias_value
+        
+class Weights(Parameters):
+    def __init__(self, name, number, weight):
+        super().__init__(name, number)
+        self.weight = weight
+        
 
-# Then change the school using:
-# student1.school = "ABC schoolversity"
+parameter = Parameters("parameters" , '2')
+bias = Bias("Bias" , 1 , 0.1)
+weights = Weights("Weight" , 2 , '10')
 
-# Print student1.school
-# Print student2.school
+print("Parameters")
+print(parameter.name)
+print(parameter.number)
+
+print("Bias")
+print(bias.name)
+print(bias.number)
+print(bias.bias_value)
+
+print("Weights")
+print(weights.name)
+print(weights.number)
+print(weights.weight)
