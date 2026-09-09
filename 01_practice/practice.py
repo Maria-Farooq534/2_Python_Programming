@@ -2,6 +2,9 @@ class Parameters:
     def __init__(self, name, number):
         self.name = name
         self.number = number
+        
+    def __str__(self):
+        return f"\nName: {self.name}  \n Number: {self.number}"
     
     
 class Bias(Parameters):
@@ -32,3 +35,7 @@ print("Weights")
 print(weights.name)
 print(weights.number)
 print(weights.weight)
+
+print(parameter)
+print(bias)
+print(weights)
