@@ -35,7 +35,3 @@ print("Weights")
 print(weights.name)
 print(weights.number)
 print(weights.weight)
-
-print(parameter)
-print(bias)
-print(weights)
