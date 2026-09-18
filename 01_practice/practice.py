@@ -1,37 +1,20 @@
-class Parameters:
-    def __init__(self, name, number):
+class Student:
+    def __init__(self, name, age):
         self.name = name
-        self.number = number
+        self.age = age
         
     def __str__(self):
-        return f"\nName: {self.name}  \n Number: {self.number}"
+        return f"\nName: {self.name} \nAge: {self.age}"
     
+    @property
+    def age(self):
+        return self._age
     
-class Bias(Parameters):
-    def __init__(self, name, number, bias_value):
-        super().__init__(name, number)
-        self.bias_value = bias_value
+    @age.setter
+    def age(self, age_value):
+        if not isinstance(age_value, int):
+            raise TypeError("Age must be in numbers.")
+        self._age = age_value
         
-class Weights(Parameters):
-    def __init__(self, name, number, weight):
-        super().__init__(name, number)
-        self.weight = weight
-        
-
-parameter = Parameters("parameters" , '2')
-bias = Bias("Bias" , 1 , 0.1)
-weights = Weights("Weight" , 2 , '10')
-
-print("Parameters")
-print(parameter.name)
-print(parameter.number)
-
-print("Bias")
-print(bias.name)
-print(bias.number)
-print(bias.bias_value)
-
-print("Weights")
-print(weights.name)
-print(weights.number)
-print(weights.weight)
+std1 = Student("Maria" , 24)
+print(std1)
