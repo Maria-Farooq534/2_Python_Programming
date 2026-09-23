@@ -14,14 +14,14 @@ print(np.std(X, axis=0))
 print(X.ndim)
 print(X.shape)
 
-def zscore_normalization(x):
+def zscore_standardization(x):
     x_mean = np.mean(x, axis=0)
     x_std = np.std(x , axis=0)
     x_norm = (x - x_mean ) / x_std
     return x_norm
 
 print(X)
-x_scaled = zscore_normalization(X)
+x_scaled = zscore_standardization(X)
 print(x_scaled)
 print(np.mean(x_scaled, axis=0))
 print(np.std(x_scaled, axis=0))
