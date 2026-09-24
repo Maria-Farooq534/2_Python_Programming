@@ -22,3 +22,6 @@ print(std1)
 # std2 = Student("Maria" , '24') # gives error
 std2 = Student("Aiman" , 25)
 print(std2)
+
+std3 = Student("Maria" , 24)
+print(std3)
