@@ -7,4 +7,5 @@ X = np.array([
     [1100, 3, 15]
 ], dtype=float)
 
-print(min(X), axis=0)
+minimum = 
+print()
